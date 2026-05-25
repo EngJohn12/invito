@@ -1,0 +1,149 @@
+/* --- IMPOSTAZIONI DI BASE --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    /* Centra la card in mezzo allo schermo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* Un gradiente rosa/pesca molto romantico e moderno */
+    background: linear-gradient(135deg, #ffc3a0 0%, #ffafbd 100%);
+    overflow: hidden; /* Evita le barre di scorrimento quando il bottone scappa */
+}
+
+/* --- LA SCHEDA PRINCIPALE --- */
+#card-container {
+    background-color: white;
+    width: 90%;
+    max-width: 400px; /* Larghezza perfetta per smartphone e desktop */
+    min-height: 450px;
+    border-radius: 20px;
+    padding: 30px 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    position: relative; /* Fondamentale per far scappare il bottone "No" */
+}
+
+/* --- LE SINGOLE FASI --- */
+.step-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Spazio tra gli elementi */
+    height: 100%;
+}
+
+/* Il trucco magico: nasconde le fasi non attive */
+.hidden {
+    display: none !important;
+}
+
+/* --- IMMAGINI E TESTI --- */
+.card-gif {
+    max-width: 200px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 1.4rem;
+    color: #333;
+}
+
+p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* --- STILE DEI PULSANTI --- */
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.btn {
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.btn-yes, .btn-next, .food-btn {
+    background-color: #ff6b81; /* Rosa scuro acceso */
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 107, 129, 0.4);
+}
+
+.btn-no {
+    background-color: #f1f2f6;
+    color: #57606f;
+    /* Non mettiamo la transition qui, altrimenti lo spostamento sembrerà lento invece che istantaneo! */
+}
+
+/* --- FASE 3 E 4: INPUT E GRIGLIA CIBO --- */
+.input-field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.input-field label {
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="date"], select {
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    font-size: 1rem;
+    outline: none;
+}
+
+input[type="date"]:focus, select:focus {
+    border-color: #ff6b81;
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Due colonne */
+    gap: 15px;
+    width: 100%;
+}
+
+.food-btn {
+    padding: 15px 10px;
+    font-size: 1rem;
+}
+
+/* --- FASE 5: LETTERA FINALE --- */
+.summary-highlight {
+    font-weight: bold;
+    color: #ff6b81;
+    font-size: 1.1rem;
+    margin: 15px 0;
+}
+
+.hearts {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}

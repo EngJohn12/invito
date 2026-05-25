@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="it">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Una Sorpresa Speciale ✨</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="background-effects"></div>
+
+    <div id="card-container">
+        
+        <div id="step-1" class="step-content active">
+            <img src="https://media.giphy.com/media/cLS1cfxvGOPVpf9g3y/giphy.gif" alt="Gattino tenero" class="card-gif">
+            <h1>Vuoi uscire con me? Riceverai un biscotto 🍪</h1>
+            <div class="button-group">
+                <button id="yes-btn" class="btn btn-yes">SÌ!</button>
+                <button id="no-btn" class="btn btn-no">no...</button>
+            </div>
+        </div>
+
+        <div id="step-2" class="step-content hidden">
+            <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZzNnazRuMmo4eHlhNW5pODA1dGhjc292dGlvdXhkbWFyM2Z5MmE5cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WpCZvghLEQq7YUAVrv/giphy.gif" alt="SpongeBob scioccato" class="card-gif">
+
+            <h1>Aspetta, hai detto di SÌ sul serio?! 🤯</h1>
+            <p>Ero convinto che avresti provato a cliccare no... okay, calma.</p>
+            <button id="to-step-3" class="btn btn-next">Andiamo avanti... 😏</button>
+        </div>
+
+        <div id="step-3" class="step-content hidden">
+            <h1>Allora... quando sei libera/o? 📅</h1>
+            <p>Scegli un giorno e un orario (non si accettano scuse!)</p>
+            
+            <div class="input-field">
+                <label for="date-picker">Seleziona il giorno:</label>
+                <input type="date" id="date-picker">
+            </div>
+
+            <div class="input-field">
+                <label for="time-picker">A che ora?</label>
+                <select id="time-picker">
+                    <option value="18:00">Alle 18:00 (Sii puntuale! ⏰)</option>
+                    <option value="20:00">Alle 20:00 (Ora di cena 🍕)</option>
+                    <option value="03:00">Alle 03:00 di notte (Invasione aliena 👽)</option>
+                    <option value="subito">Anche adesso subito! 🏃‍♂️</option>
+                </select>
+            </div>
+
+            <button id="to-step-4" class="btn btn-next">Conferma la data! 🚀</button>
+        </div>
+
+        <div id="step-4" class="step-content hidden">
+            <h1>Cosa ti va di mangiare? 🍕🍣</h1>
+            <p>Scegli il menu ideale per l'appuntamento:</p>
+            
+            <div class="food-grid">
+                <button class="food-btn" data-food="Pizza">🍕 Pizza</button>
+                <button class="food-btn" data-food="Sushi">🍣 Sushi</button>
+                <button class="food-btn" data-food="Burger">🍔 Fast Food</button>
+                <button class="food-btn" data-food="Gelato">🍦 Solo Dolce</button>
+            </div>
+        </div>
+
+        <div id="step-5" class="step-content hidden">
+            <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcGNnNHV4bmhtcTR4eHh5djk0bjEwOHd1aDM1MHNnNDZpODdwdDR1biZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/11sBLVxNs7v6WA/giphy.gif" alt="Minions felici" class="card-gif">
+            <div class="final-letter">
+                <h2>Appuntamento Confermato! ✨</h2>
+                <p>Preparati per il giorno selezionato!</p>
+                <p id="summary-text" class="summary-highlight"></p>
+                <p>Non vedo l'ora! Fatti trovare pronta/o 🚗</p>
+                <div class="hearts">❤️❤️❤️</div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
