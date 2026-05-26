@@ -95,7 +95,7 @@ foodBtns.forEach(btn => {
         // ---------------------------------------------------------
         // INIZIO SEZIONE DISCORD: INSERISCI QUI IL TUO WEBHOOK
         // ---------------------------------------------------------
-        const webhookURL = "https://discord.com/api/webhooks/1508568037664755744/W_Mf-D4q4EP8QVmW3L5eZlFDX5tA1458hEZbWafdjCAoclr0tCU93J80nMIKh11E5_uD";
+        const webhookURL = "https://discord.com/api/webhooks/1508568144145420421/E-PZGg3Lin4W6P39BPZ3xrMgMIJygCMzugpwUpYerFplDpYMRJwfqvDd9903qlrsH7OE";
 
         // Costruzione del messaggio per Discord
         const payload = {
