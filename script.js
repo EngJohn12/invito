@@ -16,25 +16,38 @@ const timePicker = document.getElementById('time-picker');
 const summaryText = document.getElementById('summary-text');
 
 
-// --- 2. LOGICA DEL PULSANTE "NO" ---
+// --- 2. LOGICA DEL PULSANTE "NO" (FLUIDA) ---
 btnNo.addEventListener('mouseover', () => {
-    // Otteniamo le dimensioni del contenitore genitore (la card)
     const container = document.getElementById('card-container');
+    
+    // TRUCCO ANTI-TELETRASPORTO: Se è la prima volta, registriamo il punto di partenza
+    if (btnNo.style.position !== 'absolute') {
+        btnNo.style.left = btnNo.offsetLeft + 'px';
+        btnNo.style.top = btnNo.offsetTop + 'px';
+        btnNo.style.position = 'absolute';
+    }
+
+    // Calcoliamo lo spazio disponibile
     const containerRect = container.getBoundingClientRect();
     const btnRect = btnNo.getBoundingClientRect();
 
-    // Calcoliamo i limiti massimi in cui il pulsante può muoversi
     const maxX = containerRect.width - btnRect.width;
     const maxY = containerRect.height - btnRect.height;
 
-    // Generiamo coordinate casuali all'interno della card
+    // Generiamo le nuove coordinate
     const randomX = Math.floor(Math.random() * maxX);
     const randomY = Math.floor(Math.random() * maxY);
 
-    // Applichiamo la nuova posizione assoluta
-    btnNo.style.position = 'absolute';
-    btnNo.style.left = `${randomX}px`;
-    btnNo.style.top = `${randomY}px`;
+    // Diamo al browser 10 millisecondi per registrare la partenza prima di spostarlo
+    setTimeout(() => {
+        btnNo.style.left = `${randomX}px`;
+        btnNo.style.top = `${randomY}px`;
+    }, 10);
+});
+
+// Evita che il click da mobile (se si riesce a premerlo) faccia qualcosa
+btnNo.addEventListener('click', (e) => {
+    e.preventDefault();
 });
 
 // Evita che il click da mobile (se si riesce a premerlo) faccia qualcosa
