@@ -92,7 +92,10 @@ p {
 .btn-no {
     background-color: #f1f2f6;
     color: #57606f;
-    /* Non mettiamo la transition qui, altrimenti lo spostamento sembrerà lento invece che istantaneo! */
+}
+
+#no-btn {
+    transition: top 0.4s ease-out, left 0.4s ease-out;
 }
 
 /* --- FASE 3 E 4: INPUT E GRIGLIA CIBO --- */
